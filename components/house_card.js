@@ -30,7 +30,7 @@ export default class HouseCard extends React.Component {
 
       }}>
 
-        <Text style={{
+        <View style={{
 
           flex: 1,
           flexDirection: 'column',
@@ -39,13 +39,13 @@ export default class HouseCard extends React.Component {
 
         }}>
 
-          <View style={{ display: 'block', width: 10, height: 10, backgroundColor: `${this.props.secondary}` }}>&nbsp;</View>
-          <View style={{ display: 'block', width: 10, height: 20, backgroundColor: `${this.props.color}` }}>&nbsp;</View>
-          <View style={{ display: 'block', width: 10, height: 10, backgroundColor: `${this.props.secondary}` }}>&nbsp;</View>
+          <View style={{ width: 10, height: 10, backgroundColor: `${this.props.secondary}` }}></View>
+          <View style={{ width: 10, height: 20, backgroundColor: `${this.props.color}` }}></View>
+          <View style={{ width: 10, height: 10, backgroundColor: `${this.props.secondary}` }}></View>
 
-        </Text>
+        </View>
 
-        <Text style={{
+        <View style={{
           width: '90%',
           padding: 20,
           backgroundColor: 'red'
@@ -53,7 +53,7 @@ export default class HouseCard extends React.Component {
         }}>
 
           {/* Placement */ }
-          <Text style={{ fontWeight: 'bold', color: 'rgba(255, 235, 60, 0.9)', width: 35 }}>
+          <View style={{ fontWeight: 'bold', color: 'rgba(255, 235, 60, 0.9)', width: 35 }}>
 
             {/* Value */ }
             <Text style={{ fontSize: 24 }}>{this.props.rank}</Text>
@@ -62,20 +62,20 @@ export default class HouseCard extends React.Component {
             <Text style={{ fontSize: 22 }}>{this.props.rank === 1 && 'st'}</Text>
             <Text style={{ fontSize: 22 }}>{this.props.rank === 2 && 'nd'}</Text>
             <Text style={{ fontSize: 22 }}>{this.props.rank === 3 && 'rd'}</Text>
-          </Text>
+          </View>
 
           {/* House */ }
           <Text style={{ width: 200, color: `${this.props.rank <= 3 ? '#fff' : 'rgba(255,255,255,0.7)'}`, fontSize: 24 }}>{this.props.house} </Text>
 
           {/* Score */ }
-          <Text style={{ color: `${this.props.rank <= 3 ? '#fff' : 'rgba(255,255,255,0.7)'}` }}>
+          <View style={{ color: `${this.props.rank <= 3 ? '#fff' : 'rgba(255,255,255,0.7)'}` }}>
             <Text style={{ fontSize: 24 }}>{this.props.score}</Text>
             <Text>pts</Text>
-          </Text>
+          </View>
 
           {/* Potential "change from last update" indicator: <Text>▲</Text> */}
 
-        </Text>
+        </View>
 
       </View>
 
